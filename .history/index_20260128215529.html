@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orçamento Numerado</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+       <img src="./assets/img/logo1.png" alt="logoEmpresa">
+    </header>
+
+   <div class="container">
+
+    <div>
+        <small id="diaSemana"></small>
+    </div>  
+
+    <h1>ORÇAMENTO</h1>
+
+   <div class="orcamento-topo">
+        <div>
+            <div id="numeroOrcamento" class="numero-orcamento"></div>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>QT</th>
+                <th>DESCRIÇÃO</th>
+                <th>Vlr.Unit</th>
+                <th>TOTAL</th>
+                 <th>Soma</th>
+            </tr>
+        </thead>
+        <tbody id="itens"></tbody>
+    </table>  
+    
+    <button type="button" onclick="adicionarItem()">+ Adicionar Item</button>
+
+    <div class="total-box">
+    T   otal Geral: R$ <span id="totalGeral">0,00</span>
+    </div>  
+  
+<script src="script.js"></script>
+</body>
+</html>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orçamento Numerado</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+       <img src="./assets/img/logo1.png" alt="logoEmpresa">
+    </header>
+
+   <div class="container">
+
+    <div>
+        <small id="diaSemana"></small>
+    </div>  
+
+    <h1>ORÇAMENTO</h1>
+
+   <div class="orcamento-topo">
+        <div>
+            <div id="numeroOrcamento" class="numero-orcamento"></div>
+        </div>
+    </div>
+
+
+    <div class="responsive-table">
+      <table class="tabelaOrcamento">
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Quantidade</th>
+                <th>Vlr.Unit</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+
+        <tbody id="itens">
+            <tr>
+                <td><input type="text" class="input-box desc" placeholder="Item"></td>
+                <td><input type="number" class="input-box qtd" value="0" oninput="calcularTabela()"></td>
+                <td><input type="number" class="input-box valor" value="0.00" step="0.01" oninput="calcularTabela()"></td>
+                <td class="totalItem">R$ 0,00</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr class="total-row">
+                <td colspan="3">TOTAL:</td>
+                <td id="totalGeral">R$ 0,00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <button onclick="adicionarLinha()">+ Adicionar Item</button>
+</div>
+ 
+<button onclick="salvarOrcamento()">Salvar Orçamento</button>
+
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
