@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f4f6f8;
+}
+
+
+header {
+    color: white;
+    padding: 30px;
+    text-align: left;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#diaSemana {
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.dadosCliente {
+    text-align: left;
+    padding: 30px;
+    font-size: 16px;
+}
+
+.numero-orcamento {
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.orcamento-topo {
+    text-align: right;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.responsive-table {
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.total-row {
+    font-weight: bold; 
+    background-color: #eee;
+}
+
+.tabelaOrcamento input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.tabelaOrcamento th,
+.tabelaOrcamento td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabelaOrcamento th {
+    background: #eaeaea;
+    text-align: center;
+}
+
+.tabelaOrcamento input {
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.tabelaOrcamento input.desc {
+    text-align: left;
+}
+
+.totalItem,
+#totalGeral {
+    text-align: right;
+    font-weight: bold;
+}
+
+ button {
+    margin-top: 10px;
+    padding: 10px; 
+    cursor: pointer; 
+}

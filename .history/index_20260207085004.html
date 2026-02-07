@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Numerado</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <img src="./assets/img/logo1.png" alt="logoEmpresa">
+</header>
+
+
+<div class="container">
+
+    <small id="diaSemana"></small>
+
+    <h1>ORÇAMENTO</h1>
+
+    <div class="orcamento-topo">
+        <div id="numeroOrcamento" class="numero-orcamento"></div>
+    </div>
+
+    
+    <div class="dadosCliente">
+        <div class="campo">
+            <label>Cliente:</label>
+            <input type="text" id="clienteNome" placeholder="Nome do Cliente">
+        </div>
+
+        <div class="campo">
+            <label></label>
+            <input type="text" id="clienteCpf" placeholder="Placa/CPF/CNPJ">
+        </div>
+    </div>
+
+    
+    <div class="responsive-table">
+        <table id="tabelaOrcamento" class="tabelaOrcamento">
+
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Vlr.Unit</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody id="itens">
+                <tr>
+                    <td><input type="text" class="desc" placeholder="Item"></td>
+                    <td><input type="number" class="qtd" min="0" oninput="calcularTabela()"></td>
+                    <td><input type="number" class="valor" step="0.01" min="0" oninput="calcularTabela()"></td>
+                    <td class="totalItem">R$ 0,00</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="3">TOTAL:</td>
+                    <td id="totalGeral">R$ 0,00</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+        <button type="button" onclick="adicionarLinha()">+ Adicionar Item</button>
+        <td><button type="button" class="remover">- Remover linha</button></td>
+    </div>
+
+    <div class="vendedor">
+        <img src="./assets/img/Bellenzier.jpg" alt="logoEmpresa1">
+        <h2>Cristiane</h2>
+        <p>CNPJ:73.730.129/0009-86</p>
+        <p>Whats 51 99534-1198</p>
+        <p>Fone: (51) 3515-8000</p>
+        <p>BELLENZIER PNEUS LTDA</p>
+        <p>cristiane@bellenzier.com.br</p>
+    </div>
+</div>
+
+<button onclick="gerarPDF()">Gerar PDF</button>
+
+
+<script src="./assets/js/main.js"></script>
+</body>
+</html>

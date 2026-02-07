@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Numerado</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <img src="./assets/img/logo1.png" alt="logoEmpresa">
+</header>
+
+
+<div class="container">
+
+    <small id="diaSemana"></small>
+
+    <h1>ORÇAMENTO</h1>
+
+    <div class="orcamento-topo">
+        <div id="numeroOrcamento" class="numero-orcamento"></div>
+    </div>
+
+    
+    <div class="dadosCliente">
+        <div class="campo">
+            <label></label>
+            <input type="text" id="clienteNome" placeholder="Nome do Cliente">
+        </div>
+
+        <div class="campo">
+            <label></label>
+            <input type="text" id="clienteCpf" placeholder="Placa/CPF/CNPJ">
+        </div>
+    </div>
+
+    
+    <div class="responsive-table">
+        <table id="tabelaOrcamento" class="tabelaOrcamento">
+
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Vlr.Unit</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody id="itens">
+                <tr>
+                    <td><input type="text" class="desc" placeholder="Item"></td>
+                    <td><input type="number" class="qtd" min="0" oninput="calcularTabela()"></td>
+                    <td><input type="number" class="valor" step="0.01" min="0" oninput="calcularTabela()"></td>
+                    <td class="totalItem">R$ 0,00</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="3">TOTAL:</td>
+                    <td id="totalGeral">R$ 0,00</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+        <button type="button" onclick="adicionarLinha()">+ Adicionar Item</button>
+    </div>
+
+    <div class="val">
+        Segunda-feira a Sexta-feira das 8 h as  18:00 h<br>
+        Sábado das 8 h as 12 h<br>
+        Validade Orçamento: 15 dias<br>
+        <label for="pagamento">Condições de Pagamento:</label>
+        <textarea id="pagamentoTexto" placeholder="Digite as condições..."></textarea><br>
+        Agradecemos a cotação.<br>
+    </div>
+
+    <div class="vendedor">
+        <div class="info">
+            <img src="./assets/img/Bellenzier.jpg" class="logo"><br>
+            <strong>Cristiane</strong><br>
+            CNPJ: 73.730.129/0009-86<br>
+            Whats 51 99534-1198<br>
+            BELLENZIER PNEUS LTDA<br>
+            cristiane@bellenzier.com.br
+        </div>
+    </div>
+</div>
+
+<button onclick="gerarPDF()">Gerar PDF</button>
+
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
