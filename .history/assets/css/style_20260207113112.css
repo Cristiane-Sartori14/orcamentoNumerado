@@ -34,17 +34,24 @@ h1 {
   font-style: italic;
 }
 
-.linha-cliente{
-  display:flex;
-  gap:10px;
-  margin-bottom:15px;
+
+.campo {
+  display: flex;
+  grid-template-columns: 120px 1fr;
+  align-items: left;
+  padding-bottom: 20px;
 }
 
-#clienteNome{ flex:3; }
-#clienteCpf{ flex:1; }
+.campo input {
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  line-height: 32px;
+}
 
 .numeroOrcamento {
-  text-align:right;
+  text-align: left;
   font-style: oblique;
   margin-bottom: 25px;
 }
@@ -71,7 +78,7 @@ h1 {
 .tabelaOrcamento th,
 .tabelaOrcamento td {
   border: 1px solid #000;
-  padding: 6px;
+  padding: 8px;
 }
 
 .tabelaOrcamento th {
@@ -131,10 +138,11 @@ input[type=number] {
    line-height: 1.6;
 }
 
-.pagamento-linha{
-  display:flex;
-  align-items:center;
-  gap:10px;
+.pagamento-linha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
 }
 
 .pagamento-linha label {
@@ -142,24 +150,10 @@ input[type=number] {
   font-weight: bold;
 }
 
-#pagamento{
-  flex:1;
-  height:28px;        
-  line-height:28px;
-  resize:none;        
-  overflow:hidden;      
-  white-space:nowrap;  
-}
-
-.observacoes {
-  display: flex;
-  flex-direction: column;
-  margin-top: 25px;
-}
-
-.observacoes label {
-  font-weight: bold;
-  margin-bottom: 6px;
+#pagamento {
+  flex: 1;          
+  min-height: 28px;
+  resize: vertical;
 }
 
 .vendedor {
@@ -167,7 +161,7 @@ input[type=number] {
     justify-content: flex-end; 
     align-items: center;
     gap: 8px;
-    margin-top: 30px;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -175,28 +169,10 @@ input[type=number] {
   font-size: 28px;
 }
 
-.logo{
-  width:150px;
-  margin-bottom:5px;
+.logo {
+    width: 160px;
 }
 
-.observacoes textarea{
-  width:100%;
-  height:50px;         
-  line-height:25px;     
-  resize:none;
-  overflow:hidden;
-
-  border:none;
-  border-bottom:0.8px solid #000;
-
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent,
-    transparent 24px,
-    #000 25px
-  );
-}
 
 button {
     border: none;
@@ -224,12 +200,11 @@ button:hover {
 
   @page {
     size: A4;
-    margin: 8mm;
+    margin: 10mm;
   }
 
   body {
-    transform: scale(0.92);
-    transform-origin: top left;
+    transform: scale(0.85);
     font-size: 10pt;
     line-height: 1.2;
     background: white !important;
@@ -238,9 +213,9 @@ button:hover {
   }
 
   .container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     box-shadow: none;
     border-radius: 0;
   }
@@ -253,7 +228,17 @@ button:hover {
 
   button {
     display: none !important;
-  } 
+  }
+
+  input {
+    border: none !important;
+    background: transparent !important;
+    pointer-events: none;
+  }
+
+  .campo input {
+    border-bottom: 1px solid #000;
+  }
 
   .responsive-table {
     overflow: visible;
@@ -264,28 +249,32 @@ button:hover {
     break-inside: avoid;
   }
 
-  input{
-    border:none !important;
-    background:transparent !important;
-    pointer-events:none;
-  }
+  textarea {
+    border: none !important;
+    background: transparent !important;
+    resize: none;
+}
 
-  textarea{
-    pointer-events:none;
-    resize:none;
-  }
+.observacoes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
 
-  .observacoes textarea{
-    border:none !important;
+.observacoes label {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
 
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent,
-    transparent 24px,
-    #000 25px
-  ) !important;
-
-  line-height:25px;
+.observacoes textarea {
+  width: 100%;
+  min-height: 120px; /* altura grande */
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-family: Arial;
+  font-size: 14px;
+  resize: vertical;
 }
 
   .vendedor {

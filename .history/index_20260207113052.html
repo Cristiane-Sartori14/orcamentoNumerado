@@ -21,13 +21,20 @@
     <h1>ORÇAMENTO</h1>
 
     <div class="orcamento-topo">
-        <div id="numeroOrcamento" class="numeroOrcamento"></div>
+        <div id="numeroOrcamento" class="numero-orcamento"></div>
     </div>
 
     
-    <div class="dadosCliente linha-cliente">
-        <input type="text" id="clienteNome" placeholder="Nome do Cliente">
-        <input type="text" id="clienteCpf" placeholder="Placa/CPF/CNPJ">
+    <div class="dadosCliente">
+        <div class="campo">
+            <label></label>
+            <input type="text" id="clienteNome" placeholder="Nome do Cliente">
+        </div>
+
+        <div class="campo">
+            <label></label>
+            <input type="text" id="clienteCpf" placeholder="Placa/CPF/CNPJ">
+        </div>
     </div>
 
     
@@ -71,7 +78,7 @@
 
     <div class="pagamento-linha">
         <label for="pagamento">Condições de Pagamento:</label>
-        <textarea id="pagamento"></textarea>
+        <textarea id="pagamento" placeholder="Digite as condições..."></textarea>
     </div>
 
     Agradecemos a cotação.<br>

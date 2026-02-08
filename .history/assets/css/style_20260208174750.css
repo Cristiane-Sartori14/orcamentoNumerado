@@ -188,7 +188,7 @@ input[type=number] {
   overflow:hidden;
 
   border:none;
-  border-bottom:0.8px solid #000;
+  border-bottom:1px solid #000;
 
   background-image: repeating-linear-gradient(
     to bottom,
@@ -238,9 +238,9 @@ button:hover {
   }
 
   .container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     box-shadow: none;
     border-radius: 0;
   }
@@ -253,7 +253,13 @@ button:hover {
 
   button {
     display: none !important;
-  } 
+  }
+
+  input {
+    border: none !important;
+    background: transparent !important;
+    pointer-events: none;
+  }
 
   .responsive-table {
     overflow: visible;
@@ -264,15 +270,10 @@ button:hover {
     break-inside: avoid;
   }
 
-  input{
-    border:none !important;
-    background:transparent !important;
+  input, textarea {
+    border: none !important;
     pointer-events:none;
-  }
-
-  textarea{
-    pointer-events:none;
-    resize:none;
+    resize: none;
   }
 
   .observacoes textarea{
