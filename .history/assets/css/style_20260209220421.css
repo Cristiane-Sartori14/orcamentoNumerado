@@ -156,13 +156,15 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   margin-top: 25px;
-  padding-bottom: 15px;
 }
 
 .observacoes label {
   font-weight: bold;
   margin-bottom: 6px;
+    padding-bottom: 30px;
+
 }
+
 
 .info strong {
   font-size: 28px;
@@ -284,13 +286,13 @@ button:hover {
 }
 
 .logo{
-  width:130px;
+  width:150px;
   margin-bottom:5px;
 }
 
 .vendedor-area select{
   align-self:flex-end;
-  margin-bottom:8px;
+  margin-bottom:10px;
 }
 
   thead {
