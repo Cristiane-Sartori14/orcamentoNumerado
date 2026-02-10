@@ -111,14 +111,15 @@ function trocarVendedor() {
   const v = vendedores[key];
 
   document.getElementById("vendedorInfo").innerHTML = `
-      <strong>${v.nome}</strong><br>
-      Whats: ${v.whats}<br>
-      ${v.email}
+      <div class="info">
+          <strong>${v.nome}</strong><br>
+          Whats: ${v.whats}<br>
+          ${v.email}
+      </div>
   `;
 }
 
 trocarVendedor();
-
 
 function gerarPDF() {
   window.print();

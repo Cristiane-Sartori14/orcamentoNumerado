@@ -106,20 +106,6 @@ const vendedores =  {
   },
 }
 
-function trocarVendedor() {
-  const key = document.getElementById("vendedorSelect").value;
-  const v = vendedores[key];
-
-  document.getElementById("vendedorInfo").innerHTML = `
-      <strong>${v.nome}</strong><br>
-      Whats: ${v.whats}<br>
-      ${v.email}
-  `;
-}
-
-trocarVendedor();
-
-
 function gerarPDF() {
   window.print();
 }

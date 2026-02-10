@@ -163,6 +163,14 @@ input[type=number] {
   margin-bottom: 6px;
 }
 
+.vendedor {
+    display: grid;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+    text-align: center;
+}
 
 .info strong {
   font-size: 28px;
@@ -221,6 +229,8 @@ button:hover {
   }
 
   body {
+    transform: scale(0.92);
+    transform-origin: top left;
     font-size: 10pt;
     line-height: 1.2;
     background: white !important;
@@ -267,20 +277,28 @@ button:hover {
   }
 
   .observacoes textarea{
-  height:50px;
-  line-height:25px;
+    border:none !important;
 
   background-image: repeating-linear-gradient(
     to bottom,
     transparent,
     transparent 24px,
     #000 25px
-  );
+  ) !important;
+
+  line-height:25px;
 }
 
 .vendedor-area{
   margin-top:30px;
   text-align:right;
+}
+
+.vendedor{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:4px;
 }
 
 .logo{
@@ -300,36 +318,40 @@ button:hover {
   tfoot {
     display: table-footer-group;
   }
-
-   #vendedorSelect {
-    display:none;
-  }
 }
-
 @media (max-width: 600px){
 
   body{
-    padding:6px;
+    padding:8px;
   }
 
   .container{
-    padding:10px;
+    max-width:100%;
+    width:100%;
+    padding:12px;
   }
- 
+  
   .linha-cliente{
     flex-direction:column;
-    gap:6px;
   }
- 
+
+  .tabelaOrcamento input.desc,
+  .tabelaOrcamento input.qtd,
+  .tabelaOrcamento input.valor{
+    width:100% !important;
+  }
+
+  .tabelaOrcamento{
+    width:100%;
+    min-width:unset;
+    font-size:14px;
+  }
+
+  
   .responsive-table{
     overflow-x:auto;
   }
 
-  .tabelaOrcamento{
-    min-width:600px; 
-    font-size:14px;
-  }
- 
   .pagamento-linha{
     flex-direction:column;
     align-items:flex-start;
@@ -337,15 +359,15 @@ button:hover {
 
   #pagamento{
     width:100%;
-  }
-  
-  .vendedor-area{
-    text-align:center;
-    align-items:center;
+    height:36px;
   }
 
-  #vendedorSelect{
-    width:100%;
-    margin-top:8px;
+  #vendedorSelect {
+    display:none;
   }
+  
+  *{
+    max-width:100%;
+  }
+
 }

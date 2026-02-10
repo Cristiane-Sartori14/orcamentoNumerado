@@ -81,44 +81,11 @@ document.querySelectorAll(".qtd, .valor").forEach((input) => {
 });
 
 const vendedores =  {
-  Cristiane: {
-    nome: "Cristiane",
-    whats: "51 99534-1198",
-    email: "cristiane@bellenzier.com.br"
-  },
-
-  Allan: {
-    nome: "Allan",
-    whats: "51 99997-6993",
-    email: "allan@bellenzier.com.br"
-  },
-
-  Gabriel: {
-    nome: "Gabriel",
-    whats: "51 99893-7118",
-    email: "gabriel@bellenzier.com.br"
-  },
-
-   Bernardo: {
-    nome: "Bernardo",
-    whats: "51 99568-9158",
-    email: "bernardo.padoin@bellenzier.com.br"
-  },
+  cristiane: {
+    nome: "Cristiane"
+    
+  }
 }
-
-function trocarVendedor() {
-  const key = document.getElementById("vendedorSelect").value;
-  const v = vendedores[key];
-
-  document.getElementById("vendedorInfo").innerHTML = `
-      <strong>${v.nome}</strong><br>
-      Whats: ${v.whats}<br>
-      ${v.email}
-  `;
-}
-
-trocarVendedor();
-
 
 function gerarPDF() {
   window.print();

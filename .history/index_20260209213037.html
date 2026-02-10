@@ -93,13 +93,6 @@
       </div>
 
       <div class="vendedor-area">
-        <img src="./assets/img/Bellenzier.jpg" class="logo" />
-
-        <div class="empresa-fixa">
-          CNPJ: 73.730.129/0009-86<br />
-          BELLENZIER PNEUS LTDA
-        </div>
-
         <select id="vendedorSelect" onchange="trocarVendedor()">
           <option value="Cristiane">Cristiane</option>
           <option value="Allan">Allan</option>
@@ -107,8 +100,16 @@
           <option value="Bernardo">Bernardo</option>
         </select>
 
-        <div id="vendedorInfo"></div>
+        <div class="vendedor info">
+          <img src="./assets/img/Bellenzier.jpg" class="logo" />
+
+          <div id="dadosVendedor"></div>
+
+          CNPJ: 73.730.129/0009-86<br />
+          BELLENZIER PNEUS LTDA
+        </div>
       </div>
+      
     </div>
 
     <button onclick="gerarPDF()">Gerar PDF</button>

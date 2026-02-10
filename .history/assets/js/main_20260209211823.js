@@ -95,30 +95,10 @@ const vendedores =  {
 
   Gabriel: {
     nome: "Gabriel",
-    whats: "51 99893-7118",
-    email: "gabriel@bellenzier.com.br"
-  },
-
-   Bernardo: {
-    nome: "Bernardo",
-    whats: "51 99568-9158",
-    email: "bernardo.padoin@bellenzier.com.br"
+    whats: "51 99534-1198",
+    email: "cristiane@bellenzier.com.br"
   },
 }
-
-function trocarVendedor() {
-  const key = document.getElementById("vendedorSelect").value;
-  const v = vendedores[key];
-
-  document.getElementById("vendedorInfo").innerHTML = `
-      <strong>${v.nome}</strong><br>
-      Whats: ${v.whats}<br>
-      ${v.email}
-  `;
-}
-
-trocarVendedor();
-
 
 function gerarPDF() {
   window.print();
