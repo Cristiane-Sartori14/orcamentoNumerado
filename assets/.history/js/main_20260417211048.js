@@ -30,11 +30,11 @@ function adicionarLinha() {
 
   tr.innerHTML = `
     <td><input type="text" class="desc"></td>
-    <td><input type="number" class="qtd" placeholder=""></td>
-    <td><input type="text" class="valor" placeholder="0,00"></td>
+    <td><input type="number" class="qtd" placeholder="0"></td>
+    <td><input type="number" class="valor" step="0.01" placeholder="0,00"></td>
     <td class="totalItem">R$ 0,00</td>
     <td class="acao"><button class="remover">✖</button></td>
-  `;
+`;
 
   tbody.appendChild(tr);
 
@@ -42,8 +42,6 @@ function adicionarLinha() {
     tr.remove();
     calcularTabela();
   });
-
-  calcularTabela(); 
 }
 
 function calcularTabela() {
@@ -53,19 +51,17 @@ function calcularTabela() {
   linhas.forEach((linha) => {
     const qtd = parseFloat(linha.querySelector(".qtd")?.value) || 0;
 
-   const valorInput = linha.querySelector(".valor")?.value || "";
-   
-   function parseMoeda(valor) {
-    if (!valor) return 0;
+    const valorInput = linha.querySelector(".valor")?.value || "";
 
-    return parseFloat(
-      valor
-        .replace(/\./g, "")
-        .replace(",", ".")
-    ) || 0;
-  }
+    function parseMoeda(valor) {
+      if (!valor) return 0;
 
-    const valor = parseMoeda(valorInput);
+      return parseFloat(
+        valor
+        .replace(/\./g, "")   
+        .replace(",", ".")    
+      ) || 0;
+    }
 
 
     const totalItem = qtd * valor;
@@ -98,18 +94,16 @@ document.addEventListener("keydown", function (e) {
   ) {
     e.preventDefault();
 
-    if (active.classList.contains("valor")) {
-      active.blur();
-    }
-
     const linha = active.closest("tr");
     const inputs = Array.from(linha.querySelectorAll("input"));
 
     const index = inputs.indexOf(active);
-    
+
+    // Se tiver próximo campo na mesma linha
     if (index < inputs.length - 1) {
       inputs[index + 1].focus();
     } else {
+      // última coluna → cria nova linha
       adicionarLinha();
 
       const ultimaLinha = document.querySelector("#tabelaOrcamento tbody tr:last-child");
@@ -117,21 +111,6 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
-
-document.addEventListener("blur", function (e) {
-  if (!e.target.classList.contains("valor")) return;
-
-  let valor = e.target.value.trim();
-  if (!valor) return;
-
-  const numero = parseFloat(valor.replace(/\./g, "").replace(",", "."));
-  if (isNaN(numero)) return;
-
-  e.target.value = numero.toLocaleString("pt-BR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
-}, true);
 
 document.addEventListener("input", function(e) {
   if (e.target.classList.contains("qtd") || e.target.classList.contains("valor")) {

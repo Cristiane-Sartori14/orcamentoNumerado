@@ -88,6 +88,9 @@ function calcularTabela() {
 
 document.addEventListener("keydown", function (e) {
   if (e.key !== "Enter") return;
+  if (active.classList.contains("valor")) {
+  active.blur(); 
+}
 
   const active = document.activeElement;
 
@@ -97,10 +100,6 @@ document.addEventListener("keydown", function (e) {
     active.classList.contains("valor")
   ) {
     e.preventDefault();
-
-    if (active.classList.contains("valor")) {
-      active.blur();
-    }
 
     const linha = active.closest("tr");
     const inputs = Array.from(linha.querySelectorAll("input"));
@@ -117,21 +116,6 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
-
-document.addEventListener("blur", function (e) {
-  if (!e.target.classList.contains("valor")) return;
-
-  let valor = e.target.value.trim();
-  if (!valor) return;
-
-  const numero = parseFloat(valor.replace(/\./g, "").replace(",", "."));
-  if (isNaN(numero)) return;
-
-  e.target.value = numero.toLocaleString("pt-BR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
-}, true);
 
 document.addEventListener("input", function(e) {
   if (e.target.classList.contains("qtd") || e.target.classList.contains("valor")) {

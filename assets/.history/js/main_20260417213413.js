@@ -86,38 +86,6 @@ function calcularTabela() {
     });
 }
 
-document.addEventListener("keydown", function (e) {
-  if (e.key !== "Enter") return;
-
-  const active = document.activeElement;
-
-  if (
-    active.classList.contains("desc") ||
-    active.classList.contains("qtd") ||
-    active.classList.contains("valor")
-  ) {
-    e.preventDefault();
-
-    if (active.classList.contains("valor")) {
-      active.blur();
-    }
-
-    const linha = active.closest("tr");
-    const inputs = Array.from(linha.querySelectorAll("input"));
-
-    const index = inputs.indexOf(active);
-    
-    if (index < inputs.length - 1) {
-      inputs[index + 1].focus();
-    } else {
-      adicionarLinha();
-
-      const ultimaLinha = document.querySelector("#tabelaOrcamento tbody tr:last-child");
-      ultimaLinha.querySelector(".desc").focus();
-    }
-  }
-});
-
 document.addEventListener("blur", function (e) {
   if (!e.target.classList.contains("valor")) return;
 

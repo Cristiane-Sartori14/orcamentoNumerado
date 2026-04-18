@@ -101,7 +101,7 @@ h1 {
 
 .tabelaOrcamento input.desc {
   text-align: left;
-  width: 300px;
+   width: auto;
 }
 
 .tabelaOrcamento input.qtd {
@@ -111,7 +111,7 @@ h1 {
 
 .tabelaOrcamento input.valor {
   text-align: right;
-  width: 90px;
+  width: 70px;
 }
 
 .totalItem,
@@ -217,111 +217,106 @@ button:hover {
 }
 
 @media print {
+  thead {
+    display: table-header-group;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
 
   @page {
     size: A4;
-    margin: 10mm;
+    margin: 8mm;
   }
 
   body {
     font-size: 10pt;
-    line-height: 1.3;
+    line-height: 1.2;
     background: white !important;
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   .container {
     width: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-shadow: none;
     border-radius: 0;
   }
- 
-  button,
-  #vendedorSelect {
+
+  footer,
+  .sidebar,
+  .no-print {
     display: none !important;
   }
 
-  header {
-    border-bottom: 2px solid #000;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+  button {
+    display: none !important;
+  } 
+
+  .responsive-table {
+    overflow: visible;
   }
 
-  h1 {
-    font-size: 16pt;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
- 
-  .linha-cliente input {
-    border: none;
-    border-bottom: 1px solid #000;
-    font-size: 11pt;
-  }
-  
-  .tabelaOrcamento {
-    width: 100%;
-    border-collapse: collapse;
+  .tabelaOrcamento tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
-  .tabelaOrcamento th {
-    border-bottom: 2px solid #000;
-    font-weight: bold;
-    text-align: center;
+  input{
+    border:none !important;
+    background:transparent !important;
+    pointer-events:none;
   }
 
-  .tabelaOrcamento td {
-    border-bottom: 1px solid #000;
+  textarea{
+    pointer-events:none;
+    resize:none;
   }
 
-  .total-row td{
-    border-top: 2px solid #000;
-    font-weight: bold;
-    font-size: 11pt;
-  }
-  .total-row td:first-child {
-   text-align: right;
-   font-weight: bold;
-  }
+  .observacoes textarea{
+  height:50px;
+  line-height:25px;
 
-  #totalGeral {
-    font-weight: bold;
-  }
-  
-  input, textarea {
-    border: none !important;
-    background: transparent !important;
-    pointer-events: none;
-  }
-
-  .observacoes textarea {
-    height: 50px;
-    line-height: 25px;
-    background-image: repeating-linear-gradient(
-      to bottom,
-      transparent,
-      transparent 24px,
-      #000 25px
-    );
-  }
- 
-  .vendedor-area {
-    margin-top: 20px;
-    text-align: right;
-    font-size: 11pt;
-    color: #000;
-  }
-
-  .logo {
-    width: 120px;
-    margin-bottom: 5px;
-  }
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 24px,
+    #000 25px
+  );
 }
 
+.vendedor-area {
+  margin-top: 30px;
+  text-align: right;
+  font-size: 14px;
+  color: #555;
+}
+
+.logo{
+  width:130px;
+  margin-bottom:5px;
+}
+
+.vendedor-area select{
+  align-self:flex-end;
+  margin-bottom:8px;
+}
+
+  thead {
+    display: table-header-group;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
+
+   #vendedorSelect {
+    display:none;
+  }
+}
 
 @media (max-width: 600px){
 

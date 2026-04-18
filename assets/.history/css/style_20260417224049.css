@@ -283,14 +283,7 @@ button:hover {
     font-weight: bold;
     font-size: 11pt;
   }
-  .total-row td:first-child {
-   text-align: right;
-   font-weight: bold;
-  }
 
-  #totalGeral {
-    font-weight: bold;
-  }
   
   input, textarea {
     border: none !important;

@@ -124,14 +124,22 @@ document.addEventListener("blur", function (e) {
   let valor = e.target.value.trim();
   if (!valor) return;
 
-  const numero = parseFloat(valor.replace(/\./g, "").replace(",", "."));
-  if (isNaN(numero)) return;
+  function parseMoeda(valor) {
+  if (!valor) return 0;
 
-  e.target.value = numero.toLocaleString("pt-BR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
-}, true);
+  valor = valor.trim();
+
+  // Caso tenha vírgula → padrão BR (1.500,50)
+  if (valor.includes(",")) {
+    return parseFloat(
+      valor.replace(/\./g, "").replace(",", ".")
+    ) || 0;
+  }
+
+  // Caso tenha só ponto → pode ser decimal (8.5)
+  return parseFloat(valor) || 0;
+}
+}
 
 document.addEventListener("input", function(e) {
   if (e.target.classList.contains("qtd") || e.target.classList.contains("valor")) {

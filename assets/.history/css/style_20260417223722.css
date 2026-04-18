@@ -238,12 +238,14 @@ button:hover {
     box-shadow: none;
     border-radius: 0;
   }
- 
+
+  /* REMOVE ELEMENTOS INÚTEIS */
   button,
   #vendedorSelect {
     display: none !important;
   }
 
+  /* CABEÇALHO */
   header {
     border-bottom: 2px solid #000;
     margin-bottom: 10px;
@@ -256,13 +258,15 @@ button:hover {
     font-weight: bold;
     margin-bottom: 10px;
   }
- 
+
+  /* CLIENTE */
   .linha-cliente input {
     border: none;
     border-bottom: 1px solid #000;
     font-size: 11pt;
   }
-  
+
+  /* TABELA */
   .tabelaOrcamento {
     width: 100%;
     border-collapse: collapse;
@@ -278,26 +282,20 @@ button:hover {
     border-bottom: 1px solid #000;
   }
 
-  .total-row td{
+  .total-row {
     border-top: 2px solid #000;
     font-weight: bold;
     font-size: 11pt;
   }
-  .total-row td:first-child {
-   text-align: right;
-   font-weight: bold;
-  }
 
-  #totalGeral {
-    font-weight: bold;
-  }
-  
+  /* INPUTS COMO TEXTO */
   input, textarea {
     border: none !important;
     background: transparent !important;
     pointer-events: none;
   }
 
+  /* OBSERVAÇÕES COM LINHAS */
   .observacoes textarea {
     height: 50px;
     line-height: 25px;
@@ -308,7 +306,8 @@ button:hover {
       #000 25px
     );
   }
- 
+
+  /* VENDEDOR */
   .vendedor-area {
     margin-top: 20px;
     text-align: right;
