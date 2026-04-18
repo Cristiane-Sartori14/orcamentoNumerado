@@ -340,13 +340,6 @@ button:hover {
       line-height: 1.2;
   }
 
-    .vendedor-area,
-  .val,
-  .observacoes {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  
   .logo {
     width: 120px;
     margin-bottom: 5px;

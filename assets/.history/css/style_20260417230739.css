@@ -337,16 +337,8 @@ button:hover {
     text-align: right;
     font-size: 11pt;
     color: #000;
-      line-height: 1.2;
   }
 
-    .vendedor-area,
-  .val,
-  .observacoes {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  
   .logo {
     width: 120px;
     margin-bottom: 5px;

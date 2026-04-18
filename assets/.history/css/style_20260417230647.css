@@ -318,8 +318,9 @@ button:hover {
   }
 
   .observacoes textarea {
-    height: 30px;
+    height: 50px;
     line-height: 25px;
+    height: 40px;
     background-image: repeating-linear-gradient(
       to bottom,
       transparent,
@@ -333,20 +334,12 @@ button:hover {
   }
  
   .vendedor-area {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: right;
     font-size: 11pt;
     color: #000;
-      line-height: 1.2;
   }
 
-    .vendedor-area,
-  .val,
-  .observacoes {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  
   .logo {
     width: 120px;
     margin-bottom: 5px;

@@ -26,15 +26,14 @@ header {
 #diaSemana {
   text-align: right;
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 h1 {
   text-align: center;
   font-style: italic;
   letter-spacing: 1px;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 10px;
 }
 
 .linha-cliente {
@@ -56,12 +55,12 @@ h1 {
 .numeroOrcamento {
   text-align: right;
   font-style: oblique;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
 
 .orcamento-topo {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .responsive-table {
@@ -251,23 +250,11 @@ button:hover {
     padding-bottom: 5px;
   }
 
-  #diaSemana {
-    margin-bottom: 5px;
-  }
-
-   .orcamento-topo {
-    margin-bottom: 10px;
-  }
-
-    .val {
-    padding-top: 10px;
-  }
-
   h1 {
     font-size: 16pt;
     text-align: center;
     font-weight: bold;
-    margin: 5px 0;
+    margin-bottom: 10px;
   }
  
   .linha-cliente input {
@@ -280,8 +267,6 @@ button:hover {
     width: 100%;
     border-collapse: collapse;
     font-size: 9pt;
-    page-break-inside: auto;
-
   }
 
   .tabelaOrcamento th {
@@ -301,7 +286,6 @@ button:hover {
     font-weight: bold;
     font-size: 11pt;
   }
-
   .total-row td:first-child {
    text-align: right;
    font-weight: bold;
@@ -318,7 +302,7 @@ button:hover {
   }
 
   .observacoes textarea {
-    height: 30px;
+    height: 50px;
     line-height: 25px;
     background-image: repeating-linear-gradient(
       to bottom,
@@ -327,26 +311,14 @@ button:hover {
       #000 25px
     );
   }
-
-   .observacoes {
-    margin-top: 10px;
-  }
  
   .vendedor-area {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: right;
     font-size: 11pt;
     color: #000;
-      line-height: 1.2;
   }
 
-    .vendedor-area,
-  .val,
-  .observacoes {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  
   .logo {
     width: 120px;
     margin-bottom: 5px;
