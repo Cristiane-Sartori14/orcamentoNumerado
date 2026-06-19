@@ -163,6 +163,11 @@ const vendedores =  {
     whats: "51 99568-9158",
     email: "bernardo.padoin@bellenzier.com.br"
   },
+   Luis: {
+    nome: "Luis Carlos Mesquita",
+    whats: "53 98405-9401",
+    email: "luis_mesquita@bellenzier.com.br"
+  },
 }
 
 function trocarVendedor() {
