@@ -168,6 +168,11 @@ const vendedores =  {
     whats: "53 98405-9401",
     email: "luis_mesquita@bellenzier.com.br"
   },
+   Claudia: {
+    nome: "Claudia P. Marin",
+    whats: "51 99605-3062",
+    email: "claudia@bellenzier.com.br"
+  },
 }
 
 function trocarVendedor() {
